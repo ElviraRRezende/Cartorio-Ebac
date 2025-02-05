@@ -125,7 +125,8 @@ system("cls");
 	  printf ("Escolha a opção desejada do menu:\n\n");
 	  printf("\t1 - regitrar nomes\n"); // "\n" quebra de linha
 	  printf("\t2 - Consultar nomes\n");
-	  printf("\t3 - Deletar nomes\n\n"); // "\n\n" indica final do texto
+	  printf("\t3 - Deletar nomes\n"); // "\n\n" indica final do texto
+	  printf("\t4 - Sair do sistema\n\n");
 	  printf("\t Esse Softwre é de uso livre dos alunos\n\n");
 	  printf("Escoclha uma opção:"); //Final do menu
 	
@@ -147,6 +148,11 @@ system("cls");
 		  
 		  case 3:
 		  deletar();
+		  break;
+		  
+		  case 4:
+		  printf("Obrigado por utilizar o sistema!\n");
+		  return 0;
 		  break;
 		  
 		  default:
