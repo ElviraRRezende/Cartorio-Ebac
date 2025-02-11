@@ -3,7 +3,7 @@
 #include <locale.h> //biblioteca de alocações de texto por região
 #include <string.h> //biblioteca responsável por cuidar das string
 		
-int registro() //função responsável por cadastrar os usuários no sistemas
+ int registro() //função responsável por cadastrar os usuários no sistemas
 {
 	//inicio da criação das variáveis/string
 	char arquivo[40];
@@ -58,7 +58,7 @@ int registro() //função responsável por cadastrar os usuários no sistemas
 	
 }
 
-int consulta()
+ int consulta()
 {
     setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
 	
@@ -88,7 +88,7 @@ int consulta()
 	  
 }
 
-int deletar()
+ int deletar()
 {
 	char cpf[40]; // "char" é uma string que também funciona com valores numéricos e que nesse caso é a melhor opção
 	
@@ -110,56 +110,73 @@ int deletar()
 	
 }
 
-int main()
+ int main()
 {
 	int opcao=0; //Definindo variáveis com o símbolo "=" de atribuição. O ";" é para indicar uma instrução 
 	int laco=1;
-	for(laco=1; laco=1;) //variável x
+	char senhadigitada[10]="a";
+	int comparacao;
+	
+	printf("\t Cartório EBAC\n\n");
+	printf("Login de adminitrador\n\nDigite a sua senha: ");
+	scanf("%s",senhadigitada);
+	
+	comparacao = strcmp(senhadigitada, "admin");
+	if (comparacao == 0)
+	
+	
 	{
+		system("cls");
+		for(laco=1; laco=1;) //variável x
+	    {
 
-system("cls");
+          system("cls");
 
-	  setlocale(LC_ALL, "Portuguese"); //definindo a linguagem
+	      setlocale(LC_ALL, "Portuguese"); //definindo a linguagem
 	
-	  printf ("\t Cartório EBAC\n\n"); //Modifique o meu código, colocando no lugar das "###" o "t" para criar a estetica do espaço. Inicio do menu
-	  printf ("Escolha a opção desejada do menu:\n\n");
-	  printf("\t1 - regitrar nomes\n"); // "\n" quebra de linha
-	  printf("\t2 - Consultar nomes\n");
-	  printf("\t3 - Deletar nomes\n"); // "\n\n" indica final do texto
-	  printf("\t4 - Sair do sistema\n\n");
-	  printf("\t Esse Softwre é de uso livre dos alunos\n\n");
-	  printf("Escoclha uma opção:"); //Final do menu
+	      printf ("\t Cartório EBAC\n\n"); //Modifique o meu código, colocando no lugar das "###" o "t" para criar a estetica do espaço. Inicio do menu
+	      printf ("Escolha a opção desejada do menu:\n\n");
+	      printf("\t1 - regitrar nomes\n"); // "\n" quebra de linha
+	      printf("\t2 - Consultar nomes\n");
+	      printf("\t3 - Deletar nomes\n"); // "\n\n" indica final do texto
+	      printf("\t4 - Sair do sistema\n\n");
+	      printf("\t Esse Softwre é de uso livre dos alunos\n\n");
+	      printf("Escoclha uma opção:"); //Final do menu
 	
 	
 	
-	  scanf("%d", &opcao); //Armazenando a escolha do usuário, escanear o que o usuário coloca. Para armazenar uma variável do tipo inteiro usa-se "%d"
+	      scanf("%d", &opcao); //Armazenando a escolha do usuário, escanear o que o usuário coloca. Para armazenar uma variável do tipo inteiro usa-se "%d"
 	
-	  system("cls"); //O sistemaoperacional usando o camando "cls" que limpa a tela das mensagens que tinham antes
+	      system("cls"); //O sistemaoperacional usando o camando "cls" que limpa a tela das mensagens que tinham antes
 	  
-	  switch(opcao)
-	  {
-	      case 1: 
-	      registro(); //chamada de funções
-		  break; //encerrando um laço
+	      switch(opcao)
+	       {case 1: 
+	        registro(); //chamada de funções
+		    break; //encerrando um laço
 		  
-		  case 2:
-		  consulta();
-		  break;
+		    case 2:
+		    consulta();
+		    break;
 		  
-		  case 3:
-		  deletar();
-		  break;
+		    case 3:
+		    deletar();
+		    break;
 		  
-		  case 4:
-		  printf("Obrigado por utilizar o sistema!\n");
-		  return 0;
-		  break;
+		    case 4:
+		    printf("Obrigado por utilizar o sistema!\n");
+		    return 0;
+		    break;
 		  
-		  default:
-		  printf("Essa opção não está disponível!\n");
-		  system("pause"); //comoando para para a execução do programa até pressionar "Enter"
-		  break; 	
-		 //fim da seleção	
-	   }	  	 
-    }
+		    default:
+		    printf("Essa opção não está disponível!\n");
+		    system("pause"); //comoando para para a execução do programa até pressionar "Enter"
+		    break; 	
+		    //fim da seleção
+			}	  	 
+        }
+	}
+	
+	else
+	    printf("Senha Incorreta!");
+	    
 }
